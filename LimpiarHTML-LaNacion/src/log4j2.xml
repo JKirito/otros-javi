@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Configuration status="INFO">
+<Appenders>
+    <Console name="Console" target="SYSTEM_OUT">
+        <PatternLayout pattern="%msg%n"/>
+    </Console>
+    <File name="FileO" bufferedIO="true" bufferSize="32768" fileName="info.log" immediateFlush="false" append="false">
+        <PatternLayout pattern="%msg%n"/>
+    </File>
+</Appenders>
+<Loggers>
+    <Logger level="info">
+        <AppenderRef ref="Console"/>
+    </Logger>
+    <Root level="trace">
+        <AppenderRef ref="FileO"/>
+    </Root>
+</Loggers>
+</Configuration>
